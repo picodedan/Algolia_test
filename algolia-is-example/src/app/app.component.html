@@ -1,0 +1,13 @@
+<h1>ecommerce demo</h1>
+<ais-instantsearch [config]="searchConfig">
+  <ais-panel header="search and filter">
+    <ais-search-box></ais-search-box>
+    <ais-range-slider attribute="price" [min]="1" [max]="2000">
+    </ais-range-slider>
+  </ais-panel>
+  <ais-panel header="results">
+    <ais-hits></ais-hits>
+    <ais-hits-per-page [items]="hitsPerPageConfig"></ais-hits-per-page>
+  </ais-panel>
+  <!-- <ais-refinement-list attribute="categories"></ais-refinement-list> -->
+</ais-instantsearch>
