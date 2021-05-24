@@ -37,11 +37,11 @@ jobs:
           # Build configuration for the angular app
           build_configuration: production
           # base href for the app
-          base_href: "/"
+          base_href: /Algolia_test/
           # branch on which the angular build will be deployed
-          deploy_branch: main
+          deploy_branch: gh-pages
           # The folder in which `ng build` provides its output. This is the folder which will be deployed to the `deploy_branch`.
-          angular_dist_build_folder: dist
+          angular_dist_build_folder: dist/algolia-is-example
           # If the action should run 'ng lint'
           run_lint: false
           # Will not fail the step if anything fails
