@@ -1,1 +1,10 @@
-# Algolia_test
+# Project Outline
+
+The objective for this project was to dive into Algolia and get a feel for the overall product,  it's capabilities, and how to use it from the customers perspective.  I elected to create this project using Angular as the UI framework, as that is the toolset I'm most familiar with at this time.  This allowed me to focus on using Algolia and experiencing the ease of bootstrapping powerful search and filtering capabilities.  I chose to use one of the provided datasets(ecommerce), and built out a basic clone of a bestbuy/amazon search and product exploration UI.  
+
+Integrating the Algolia provided components was overall quite easy.  I found the documentation on the components very straitforward and easy to digest.  Most things 'just worked' right away, and I didn't run into any issues breaking fuctionality down into sub-components.  Styling the components was pretty painless as well, as compared to some other component libraries I've used in the past (looking at you primeNg...)
+
+There were a few things I struggled with, as there were a few components that didn't work as I expected right away.  Those were the 'ais-hierarchical-menu', 'ais-refinement-list', and 'ais-rating-menu'.  These components required that I setup filtering and facets on my index,  which I may have missed in some of the tutorial docs,  would have been GREAT if it was pointed out in the component documentation as well.  There was also a bit of 'sticky-state' with the 'ais-sort-by' component, where it seemed to be using configuration data from a previous save, rather than the most currrent.  This required commenting out the compoent, saving, and un-comment again to get it to pick up the new config.  
+
+
+Overall, I had a great experience workign with both the Algolia UI and the anguilar-instantsearch library.  The Algolia UI in particular was easy to understand and had lots of documentation links to explain what various features and utilities did.  I know I barely scratched the surface of what the platform can do and look forward to learning more!
