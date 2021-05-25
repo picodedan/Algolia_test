@@ -1,13 +1,22 @@
-<h1>ecommerce demo</h1>
 <ais-instantsearch [config]="searchConfig">
-  <ais-panel header="search and filter">
-    <ais-search-box></ais-search-box>
-    <ais-range-slider attribute="price" [min]="1" [max]="2000">
-    </ais-range-slider>
-  </ais-panel>
-  <ais-panel header="results">
-    <ais-hits></ais-hits>
-    <ais-hits-per-page [items]="hitsPerPageConfig"></ais-hits-per-page>
-  </ais-panel>
-  <!-- <ais-refinement-list attribute="categories"></ais-refinement-list> -->
+  <div class="app-container">
+    <div class="header"><app-header></app-header></div>
+    <div class="sidebar"><app-filters></app-filters></div>
+    <div class="main">
+      <ais-hits>
+        <ng-template let-hits="hits" let-results="results">
+          <!-- No results message -->
+          <div *ngIf="hits.length === 0">
+            No results found matching <strong>{{ results.query }}</strong>
+          </div>
+
+          <!-- Hit template -->
+          <ng-container *ngFor="let hit of hits" class="hit-container">
+            <app-search-hit [hit]="hit"></app-search-hit>
+          </ng-container>
+        </ng-template>
+      </ais-hits>
+      <ais-hits-per-page [items]="hitsPerPageConfig"></ais-hits-per-page>
+    </div>
+  </div>
 </ais-instantsearch>

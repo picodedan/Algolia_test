@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'algolia-is-example';
@@ -13,6 +13,12 @@ export class AppComponent {
     indexName: 'dev_ecommerce_sample',
     routing: true
   };
+  // searchConfig = {
+  //   apiKey: '6be0576ff61c053d5f9a3225e2a90f76',
+  //   appId: 'latency',
+  //   indexName: 'instant_search',
+  //   routing: true
+  // };
 
   hitsPerPageConfig = [
     { value: 10, label: '10 per page', default: true },

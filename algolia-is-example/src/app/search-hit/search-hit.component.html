@@ -1,0 +1,13 @@
+<div class="hit-container">
+  <div class="image-container">
+    <img class="image" [src]="hit.image" [alt]="hit.name">
+  </div>
+  <div class="product-description">
+    <b><ais-highlight attribute="name" [hit]="hit"> </ais-highlight></b>
+    <br>
+    <i><ais-highlight attribute="brand" [hit]="hit"></ais-highlight></i>
+    <p>{{ hit.description }}</p>
+    Price:{{hit.price}}
+    Rating: {{hit.rating}}
+  </div>
+</div>
